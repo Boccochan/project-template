@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.headerStyle {
+  @apply bg-white text-gray-800 font-medium;
+}
+
+* {
+  margin: 0;
+  padding: 0; /*全要素のマージン・パディングをリセット*/
+}
+
+@media screen and (max-width: 640px) {
+  .slidein {
+    animation: SlideIn 0.4s forwards;
+  }
+
+  .slideout {
+    animation: SlideOut 0.4s forwards;
+  }
+
+  /* CSSアニメーションの設定 */
+  @keyframes SlideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes SlideOut {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
